@@ -16,7 +16,7 @@
 			<div class="container-fluid">
 				<div class="panel panel-default">
 					<div class="panel-heading bg-white">
-						{if $tplOverviewTabOutput}<span class="panel-title fa-stack pull-right">
+						{if $tplOverviewTabOutput}<span class="panel-title fa-stack pull-right" style="margin-top: -10px">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-{if $type eq "hostingaccount" || $type == "reselleraccount"}hdd-o{elseif $type eq "server"}database{else}archive{/if} fa-stack-1x fa-inverse"></i>
 						</span>{/if}
