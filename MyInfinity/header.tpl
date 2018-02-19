@@ -11,6 +11,7 @@
 	{include file="$template/includes/head.tpl"}
 	
 	{$headoutput}
+
 </head>
 
 {$headeroutput}

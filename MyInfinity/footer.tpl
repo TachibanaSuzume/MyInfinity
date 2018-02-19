@@ -26,7 +26,7 @@
 	<!-- build:js {$WEB_ROOT}/templates/{$template}/assets/js/app.min.js -->
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/library.js"></script>
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/plugins.js"></script>
-	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/app.js"></script>
+	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/app.min.js"></script>
 	<!-- endbuild -->
 {/if}
 </body>
