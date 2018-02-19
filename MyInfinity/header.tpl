@@ -15,7 +15,9 @@
 
 {$headeroutput}
 
+{if $formaction == 'dologin.php' || $filename == 'pwreset' || $filename == 'register' || $filename == 'login' || $filename == 'clientarea' && !$loggedin}
 
+{else}
 
 <body class="menubar-left menubar-unfold menubar-light theme-primary">
 
@@ -71,7 +73,7 @@
 
 <main id="app-main" class="app-main">
   <div class="wrap">
-
+{/if}
 
 {if $inShoppingCart}
 <section class="app-content">
