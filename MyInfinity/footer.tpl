@@ -1,6 +1,12 @@
-{if $formaction == 'dologin.php' || $filename == 'pwreset' || $filename == 'register' || $filename == 'login' || $filename == 'clientarea' && !$loggedin}
+{if $inShoppingCart}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{/if}
 
-{else}
 	  <div class="wrap p-t-0">
 		<footer class="app-footer">
 		  <div class="clearfix">
@@ -20,6 +26,6 @@
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/plugins.js"></script>
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/app.js"></script>
 	<!-- endbuild -->
-{/if}
+
 </body>
 </html>
