@@ -198,7 +198,9 @@
 								<span>
 									{if $status eq "Unpaid" && $allowchangegateway}
 										<form method="post" action="{$smarty.server.PHP_SELF}?id={$invoiceid}">
-											{$gatewaydropdown}
+											<div class="form-group">
+												{$gatewaydropdown}
+											</div>
 										</form>
 									{else}
 										{$paymentmethod}

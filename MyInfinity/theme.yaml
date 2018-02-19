@@ -1,7 +1,7 @@
 # WHMCS MyInfinity Theme Configuration File
 
-name: "MyInfinity For WHMCS Theme"
-description: "The MyInfinity Theme for WHMCS Version 6.0"
+name: "MyInfinity For WHMCS"
+description: "The MyInfinity Theme for WHMCS Version 6&7.x"
 author: "Zzm317"
 properties:
   serverSidePagination: false # Defines client side will handle pagination

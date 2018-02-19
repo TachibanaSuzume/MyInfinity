@@ -36,7 +36,7 @@
 				{if $condlinks.addfunds}
 				<li>
 					<a class="text-color" href="{$WEB_ROOT}/clientarea.php?action=addfunds">
-                      <span class="m-r-xs"><i class="fa fa-wallet"></i></span>
+                      <span class="m-r-xs"><i class="fa fa-credit-card"></i></span>
                       <span>{$LANG.addfunds}</span>
 					</a>
 				</li>
