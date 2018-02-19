@@ -8,17 +8,22 @@
                         </br>
                     </div>
                     <div class="panel-body">
+
+                        {$text}
+
+                        <br />
+
+                        <div class="pull-left">
+                            <strong><i class="fa fa-calendar"></i> {"jS M Y"|date:$timestamp}</strong>
+                        </div>
+                        <br>
+                        <br>
+
                         {if $twittertweet}
                             <div class="pull-right">
                                 <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="{$twitterusername}">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
                             </div>
                         {/if}
-
-                        {$text}
-
-                        <br />
-                        <br />
-
                         
                         {if $googleplus1}
                             <br />
@@ -67,10 +72,6 @@
                             {/literal}
                             <fb:comments href="{fqdnRoutePath('announcement-view', $id, $urlfriendlytitle)}" num_posts="5" width="500"></fb:comments>
                         {/if}
-
-                        <p class="pull-right">
-                            <i class="fa fa-calendar"></i> {"jS M Y"|date:$timestamp}
-                        </p>
 
                         <p>
                             <a href="{routePath('announcement-index')}" class="btn btn-default">{$LANG.clientareabacklink}</a>
