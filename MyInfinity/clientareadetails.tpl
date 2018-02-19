@@ -111,18 +111,19 @@
 						            {/foreach}
 						        {/if}
 
-						        {if $emailoptoutenabled}
-						        <div class="form-group col-sm-6">
-						            <label class="control-label" for="inputEmailOptOut">{$LANG.emailoptout}</label>
-						            <div class="controls checkbox">
-						                <label>
-						                    <input type="checkbox" value="1" name="emailoptout" id="inputEmailOptOut" {if $emailoptout} checked{/if} /> {$LANG.emailoptoutdesc}
-						                </label>
-						            </div>
-						        </div>
-						        {/if}
 						           
 						    </div>
+
+						    {if $emailoptoutenabled}
+						        <div class="form-group">
+									<div class="checkbox">
+										<input type="checkbox" value="1" name="emailoptout" id="inputEmailOptOut" {if $emailoptout} checked{/if} /> 
+										<label class="control-label" for="inputEmailOptOut">{$LANG.emailoptout}</label>
+										<br>
+										{$LANG.emailoptoutdesc}
+									</div>
+								</div>
+						    {/if}
 
 						    <div class="form-group text-center">
 						        <input class="btn btn-primary" type="submit" name="save" value="保存修改" />

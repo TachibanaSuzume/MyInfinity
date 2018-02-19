@@ -72,8 +72,8 @@
                                     <div class="form-group">
                                         <label class="control-label" for="inputSubaccountActivate">{$LANG.subaccountactivate}</label>
                                         <div class="controls checkbox">
-                                            <label>
-                                                <input type="checkbox" name="subaccount" id="inputSubaccountActivate"{if $subaccount} checked{/if} /> {$LANG.subaccountactivatedesc}
+                                            <input type="checkbox" name="subaccount" id="inputSubaccountActivate"{if $subaccount} checked{/if} /> 
+                                            <label class="control-label" for="inputSubaccountActivate">{$LANG.subaccountactivatedesc}
                                             </label>
                                         </div>
                                     </div>
@@ -121,12 +121,13 @@
                                     <div class="checkbox clearfix">
                                         {foreach $allPermissions as $permission}
                                             <div class="col-sm-6">
-                                                <label>
-                                                    <input type="checkbox" name="permissions[]" value="{$permission}"{if in_array($permission, $permissions)} checked{/if} />
+                                                <input type="checkbox" name="permissions[]" id="{$permission}" value="{$permission}"{if in_array($permission, $permissions)} checked{/if} />
+                                                <label class="control-label" for="{$permission}">
                                                     <span>
                                                         {assign var='langPermission' value='subaccountperms'|cat:$permission}{$LANG.$langPermission}
                                                     </span>
-                                                </label>
+                                                </label><br>
+                                                <br>
                                             </div>
                                         {/foreach}
                                     </div>
@@ -156,25 +157,33 @@
 
                             <div class="form-group">
                                 <label class="control-label">{$LANG.clientareacontactsemails}</label>
-                                <div class="controls checkbox">
-                                    <label>
-                                        <input type="checkbox" name="generalemails" id="generalemails" value="1"{if $generalemails} checked{/if} />
+                                <div class="checkbox">
+                                    <input type="checkbox" name="generalemails" id="generalemails" value="1"{if $generalemails} checked{/if} />
+                                    <label class="control-label" for="generalemails" >
                                         {$LANG.clientareacontactsemailsgeneral}
                                     </label><br />
-                                    <label>
-                                        <input type="checkbox" name="productemails" id="productemails" value="1"{if $productemails} checked{/if} />
+                                    <br>
+
+                                    <input type="checkbox" name="productemails" id="productemails" value="1"{if $productemails} checked{/if} />
+                                    <label class="control-label" for="productemails" >
                                         {$LANG.clientareacontactsemailsproduct}
                                     </label><br />
-                                    <label>
-                                        <input type="checkbox" name="domainemails" id="domainemails" value="1"{if $domainemails} checked{/if} />
+                                    <br>
+
+                                    <input type="checkbox" name="domainemails" id="domainemails" value="1"{if $domainemails} checked{/if} />
+                                    <label class="control-label" for="domainemails" >
                                         {$LANG.clientareacontactsemailsdomain}
                                     </label><br />
-                                    <label>
-                                        <input type="checkbox" name="invoiceemails" id="invoiceemails" value="1"{if $invoiceemails} checked{/if} />
+                                    <br>
+
+                                    <input type="checkbox" name="invoiceemails" id="invoiceemails" value="1"{if $invoiceemails} checked{/if} />
+                                    <label class="control-label" for="invoiceemails" >
                                         {$LANG.clientareacontactsemailsinvoice}
                                     </label><br />
-                                    <label>
-                                        <input type="checkbox" name="supportemails" id="supportemails" value="1"{if $supportemails} checked{/if} />
+                                    <br>
+                                    
+                                    <input type="checkbox" name="supportemails" id="supportemails" value="1"{if $supportemails} checked{/if} />
+                                    <label class="control-label" for="supportemails" >
                                         {$LANG.clientareacontactsemailssupport}
                                     </label>
                                 </div>
