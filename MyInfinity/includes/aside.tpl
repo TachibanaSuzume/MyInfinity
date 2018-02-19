@@ -32,15 +32,21 @@
                     <span>{$LANG.clientareanavchangepw}</span>
                   </a>
                 </li>
+                <li>
+                  <a class="text-color" href="{$WEB_ROOT}/clientarea.php?action=emails">
+                      <span class="m-r-xs"><i class="fa fa-envelope-o"></i></span>
+                      <span>{$LANG.clientareaemails}</span>
+                  </a>
+                </li>
 				
-				{if $condlinks.addfunds}
-				<li>
-					<a class="text-color" href="{$WEB_ROOT}/clientarea.php?action=addfunds">
+        				{if $condlinks.addfunds}
+        				<li>
+        					<a class="text-color" href="{$WEB_ROOT}/clientarea.php?action=addfunds">
                       <span class="m-r-xs"><i class="fa fa-credit-card"></i></span>
                       <span>{$LANG.addfunds}</span>
-					</a>
-				</li>
-				{/if}
+        					</a>
+        				</li>
+        				{/if}
 						
                 <li role="separator" class="divider"></li>
                 <li>
