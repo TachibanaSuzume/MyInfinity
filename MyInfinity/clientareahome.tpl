@@ -80,65 +80,71 @@
 			</div>
 		</div>
 
+		{function name=outputHomePanels}
+		<div class="widget">
+			<header class="widget-header">
+				<h4 class="widget-title pull-left">
+				{if $item->hasIcon()}<i class="{$item->getIcon()}"></i>&nbsp;{/if}
+				{$item->getLabel()}
+				{if $item->hasBadge()}&nbsp;<span class="badge">{$item->getBadge()}</span>{/if}</h4>
+				{if $item->getExtra('btn-link') && $item->getExtra('btn-text')}
+				<div class="pull-right">
+					<a href="{$item->getExtra('btn-link')}" >
+						<button type="button" class="btn bg-color-{$item->getExtra('color')} btn-xs">{if $item->getExtra('btn-icon')}<i class="fa {$item->getExtra('btn-icon')}"></i>  {/if}{$item->getExtra('btn-text')}</button>	
+					</a>
+				</div>	
+				{/if}
+			</header><!-- .widget-header -->
+			<hr class="widget-separator">
+			{if $item->hasBodyHtml()}
+				<div class="widget-body">
+					{$item->getBodyHtml()}
+				</div>
+			{/if}
+			{if $item->hasChildren()}
+				<div class="widget-body">
+						<div class="streamline">
+						{foreach $item->getChildren() as $childItem}
+							<div class="sl-item sl-primary">
+								<a href="{if $childItem->getUri()}{$childItem->getUri()}{else}javascript:void(0){/if}" id="{$childItem->getId()}" {if $childItem->getAttribute('dataToggleTab')} data-toggle="tab"{/if}{if $childItem->getAttribute('target')} target="{$childItem->getAttribute('target')}"{/if}>
+								<div class="sl-content">
+									<small class="text-muted">{if $childItem->hasBadge()}{$childItem->getBadge()}{/if}</small>
+									<p>{if $childItem->hasIcon()}<i class="{$childItem->getIcon()}"></i>{/if}{$childItem->getLabel()}</p>
+								</div>
+								</a>
+							</div>
+						{/foreach}
+					</div>
+				</div>
+			{/if}
+			{if $item->hasFooterHtml()}
+				<footer class="widget-footer">
+					{$item->getFooterHtml()}
+				</footer>
+			{/if}
+		</div>
+		{/function}
+
 		
 		<div class="row">
 
-				{function name=outputHomePanels}
-					<div menuItemName="{$item->getName()}" class="widget" {if $item->getAttribute('id')} id="{$item->getAttribute('id')}"{/if}>
-						<header class="widget-header">
-							<h4 class="widget-title pull-left">{if $item->hasIcon()}<i class="{$item->getIcon()}"></i>&nbsp;{/if}
-							{$item->getLabel()}
-							{if $item->hasBadge()}&nbsp;<span class="badge">{$item->getBadge()}</span>{/if}</h4>
-							{if $item->getExtra('btn-link') && $item->getExtra('btn-text')}
-							<div class="pull-right">
-								<a href="{$item->getExtra('btn-link')}" >
-									<button type="button" class="btn bg-color-{$item->getExtra('color')} btn-xs">{if $item->getExtra('btn-icon')}<i class="fa {$item->getExtra('btn-icon')}"></i>  {/if}{$item->getExtra('btn-text')}</button>	
-								</a>
-							</div>	
-							{/if}
-						</header>
-						<hr class="widget-separator"/>
-						{if $item->hasBodyHtml()}
-							<div class="widget-body">
-								{$item->getBodyHtml()}
-							</div>
-						{/if}
-						{if $item->hasChildren()}
-							<div class="widget-body">
-								<div class="list-group {if $item->getChildrenAttribute('class')} {$item->getChildrenAttribute('class')}{/if}">
-									{foreach $item->getChildren() as $childItem}
-										<a href="{if $childItem->getUri()}{$childItem->getUri()}{else}javascript:void(0){/if}" class="list-group-item clearfix" id="{$childItem->getId()}" {if $childItem->getAttribute('dataToggleTab')} data-toggle="tab"{/if}{if $childItem->getAttribute('target')} target="{$childItem->getAttribute('target')}"{/if}>
-											<span class="pull-left">{if $childItem->hasIcon()}<i class="{$childItem->getIcon()}"></i>{/if}{$childItem->getLabel()}</span>
-											<div class="pull-right">{if $childItem->hasBadge()}{$childItem->getBadge()}{/if}</div>
-										</a>
-									{/foreach}
-								</div>
-							</div>
-						{/if}
-						{if $item->hasFooterHtml()}
-							<footer class="widget-footer">
-								{$item->getFooterHtml()}
-							</footer>
-						{/if}
-					</div>
-				{/function}
+				<div class="col-sm-6">		
+		            {foreach $panels as $item}
+		                {if $item@iteration is odd}
+		                    {outputHomePanels}
+		                {/if}
+		            {/foreach}
 
-				{foreach $panels as $item}
-					{if $item@iteration is even}
-						<div class="col-sm-6">
-							{outputHomePanels}
-						</div>
-					{/if}
-				{/foreach}
+		        </div>
+		        <div class="col-sm-6">
 
-				{foreach $panels as $item}
-					{if $item@iteration is odd}
-						<div class="col-sm-6">
-							{outputHomePanels}
-						</div>
-					{/if}
-				{/foreach}
+		            {foreach $panels as $item}
+		                {if $item@iteration is even}
+		                    {outputHomePanels}
+		                {/if}
+		            {/foreach}
 
-			</div>
+		        </div>
+
 		</div>
 	</section>
