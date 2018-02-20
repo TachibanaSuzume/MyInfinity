@@ -37,7 +37,7 @@
                                 <thead>
                                     <tr>
                         				<th><div>{$LANG.supportticketssubject}</div></th>
-                        				<th class="hidden-sm"><div>{$LANG.supportticketsdepartment}</div></th>
+                        				<th class="hidden-sm hidden-xs"><div>{$LANG.supportticketsdepartment}</div></th>
                         				<th><div>{$LANG.supportticketsticketlastupdated}</div></th>
                         				<th><div>{$LANG.supportticketsstatus}</div></th>
                                     </tr>
@@ -47,8 +47,8 @@
                                         <tr onclick="window.location='viewticket.php?tid={$ticket.tid}&amp;c={$ticket.c}'">
                                             <td class="cell-title">{if $ticket.unread}<strong>{/if}<b>#{$ticket.tid}</b> - {$ticket.subject}{if $ticket.unread}</strong>{/if}</td>
                         					<td class="hidden-sm hidden-xs">{$ticket.department}</td>
-                        					<td class="cell-date" data-order="{$ticket.normalisedLastReply}">{$ticket.lastreply}</td>
-                        					<td class="cell-status"><span class="label label-simple label-{$ticket.statusClass}">{$ticket.status|strip_tags:false}</span></td>
+                        					<td class="text-center" data-order="{$ticket.normalisedLastReply}">{$ticket.lastreply}</td>
+                        					<td class="text-center"><span class="label label-simple status-{$ticket.statusClass|strtolower}">{$ticket.status|strip_tags:false}</span></td>
 
                                         </tr>
                                     {/foreach}

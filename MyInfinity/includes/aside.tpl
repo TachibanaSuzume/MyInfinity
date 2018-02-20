@@ -2,7 +2,7 @@
 	  <div class="media-left">
         <div class="avatar avatar-md avatar-circle">
 		{if $loggedin}
-          <a href="javascript:void(0)"><img class="img-avatar img-avatar32" src="//www.gravatar.com/avatar/{$clientsdetails.email|md5}?s=64&d={$systemurl}/templates/{$template}/assets/images/default.jpg" alt="" /></a>
+          <a href="javascript:void(0)"><img class="img-avatar img-avatar32" src="//cn.gravatar.com/avatar/{$clientsdetails.email|md5}?s=64&d={$systemurl}/templates/{$template}/assets/images/default.jpg" alt="" /></a>
 		{else}
 		  <a href="javascript:void(0)"><img class="img-responsive" src="{$WEB_ROOT}/templates/{$template}/assets/images/default.jpg" alt="avatar"/></a>
 		{/if}

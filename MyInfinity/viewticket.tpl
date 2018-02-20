@@ -40,7 +40,7 @@
 														<div class="mail-item">
 															<table class="mail-container">
 																<tr>
-																	<td class="mail-left">
+																	<td class="mail-left hidden-sm hidden-xs">
 																		<div class="avatar avatar-lg avatar-circle">
 																			<img src="//cn.gravatar.com/avatar/{$reply.email|md5}?s=100&d={$systemurl}templates/{$template}/assets/images/default.jpg" alt="{$reply.name}">
 																		</div>
@@ -71,7 +71,7 @@
 															                </div>
 															            {/if}
 																	</td>
-																	<td class="mail-right">
+																	<td class="mail-right hidden-sm hidden-xs">
 																		<p class="mail-item-date">{$reply.date}</p>
 																	</td>
 																</tr>
@@ -112,9 +112,6 @@
 
 							            <div id="ticket-message" class="ticket-message">
 							                <br>
-							                {if $errormessage}
-							                    {include file="$template/includes/alert.tpl" type="error" errorshtml=$errormessage}
-							                {/if}
 							                <form method="post" action="{$smarty.server.PHP_SELF}?tid={$tid}&amp;c={$c}&amp;postreply=true" enctype="multipart/form-data" role="form" id="frmReply">
 							                    {if !$loggedin}
 							                        <div class="row">
@@ -152,14 +149,20 @@
 													        </div>
 													    </div>
 									                </div>
-											        <button type="submit" id="openTicketSubmit" class="btn btn-success">
+											        <button type="submit" id="openTicketSubmit" class="btn btn-success btn-block">
 											        	<span>{$LANG.supportticketsticketsubmit}</span>
 											        </button>
 									            </div>
 							                </form>
+											{if !$closedticket}
+						                	<br>
+												<a onclick="window.location='?tid={$tid}&c={$c}&closeticket=true'"><button class="btn btn-danger btn-block" ><i class="fa fa-times"></i> {$LANG.supportticketsclose}</button></a>
+											{/if}
 							            </div>
 							        </div>
 							    </div>
+							{else}  
+								{include file="$template/includes/alert.tpl" type="danger" title=$LANG.thereisaproblem msg=$LANG.supportticketinvalid textcenter=true}
 							{/if}
 						</div>
 					</div>
