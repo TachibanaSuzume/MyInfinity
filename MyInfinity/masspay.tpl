@@ -1,3 +1,5 @@
+<form method="post" action="clientarea.php?action=masspay" class="form-horizontal">
+                                <input type="hidden" name="geninvoice" value="true" />
 <section class="app-content">
     <div class="row">
         <div class="col-md-9">
@@ -79,23 +81,16 @@
                     </div>
                     <div class="panel-body">
                         <div class="widget-body">
-                            <form method="post" action="clientarea.php?action=masspay" class="form-horizontal">
-                                <input type="hidden" name="geninvoice" value="true" />
-                                <fieldset>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <select name="paymentmethod" id="paymentmethod" class="form-control">
-                                                {foreach from=$gateways item=gateway}
-                                                    <option value="{$gateway.sysname}">{$gateway.name}</option>
-                                                {/foreach}
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="submit" value="{$LANG.masspaymakepayment}" class="btn btn-primary btn-block" />
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>    
+                            <div class="form-group">
+                                <select name="paymentmethod" id="paymentmethod" class="form-control">
+                                    {foreach from=$gateways item=gateway}
+                                        <option value="{$gateway.sysname}">{$gateway.name}</option>
+                                    {/foreach}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="{$LANG.masspaymakepayment}" class="btn btn-primary btn-block" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -103,3 +98,4 @@
         </div>
     </div>
 </section>
+</form>    
