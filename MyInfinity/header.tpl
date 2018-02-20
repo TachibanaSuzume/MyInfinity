@@ -76,7 +76,7 @@
   <div class="wrap">
 {/if}
 
-{if $inShoppingCart}
+{if $inShoppingCart || strstr($templatefile, 'store') || strstr($templatefile, 'oauth')}
 <section class="app-content">
     <div class="row">
         <div class="col-md-12">
