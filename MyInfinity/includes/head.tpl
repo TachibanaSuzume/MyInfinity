@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/core.css">
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/misc-pages.css">
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/app.css">	
-	<script src="{$WEB_ROOT}/templates/{$template}/assets/libs/bower/jquery/dist/script.min.js"></script>
+	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/script.min.js"></script>
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/main.js"></script>
 
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/clipboard.min.js"></script>
