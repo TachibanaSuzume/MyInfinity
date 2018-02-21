@@ -19,6 +19,11 @@
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/all.min.css">	
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/bootstraps.css">
 
+	{if $inShoppingCart || strstr($templatefile, 'store') || strstr($templatefile, 'oauth')}
+	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/misc-pages.css">
+	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/cart.css">
+
+	{/if}
 
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/libs/bower/animate.css/animate.min.css">
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/libs/bower/perfect-scrollbar/css/perfect-scrollbar.css">
