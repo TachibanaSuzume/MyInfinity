@@ -39,6 +39,7 @@
 
 						<div class="panel-body">
 							<div class="row">
+
 								<div class="col-sm-6 col-xs-6">
 									{if $logo}
 										<p><img src="{$logo}" title="{$companyname}" /></p>
@@ -53,10 +54,15 @@
 										<p class="text-right">{$LANG.invoicesdatedue}: {$datedue}</p>
 									{/if}	
 								</div>
-								
+
+
 								{if $notes}
-									{include file="$template/includes/panel.tpl" type="info" headerTitle=$LANG.invoicesnotes bodyContent=$notes}
+									<div class="col-sm-12 col-xs-12">
+										<h4 class="fw-600">{$LANG.invoicesnotes}
+										<p class="text-left">{$notes}</p></h4>
+									</div>
 								{/if}
+								
 					
 								<div class="col-sm-8 col-xs-7">
 									<h4 class="m-t-lg fw-600">{$LANG.invoicespayto}:</h4>
@@ -199,7 +205,7 @@
 									{if $status eq "Unpaid" && $allowchangegateway}
 										<form method="post" action="{$smarty.server.PHP_SELF}?id={$invoiceid}">
 											<div class="form-group">
-												{$gatewaydropdown}
+												{$gatewaydropdown|replace:'select-inline':''}
 											</div>
 										</form>
 									{else}
