@@ -15,7 +15,11 @@
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/clipboard.min.js"></script>
 {else}
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
+	
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/all.min.css">	
+	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/bootstraps.css">
+
+
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/libs/bower/animate.css/animate.min.css">
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/libs/bower/perfect-scrollbar/css/perfect-scrollbar.css">
 	<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/core.css">
