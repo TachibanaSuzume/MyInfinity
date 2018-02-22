@@ -1,14 +1,7 @@
-{if $inShoppingCart}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-{/if}
 {if $formaction == 'dologin.php' || $filename == 'pwreset' || $filename == 'register' || $filename == 'login' || $filename == 'clientarea' && !$loggedin}
 
 {else}
+	  </div>
 	  <div class="wrap p-t-0">
 		<footer class="app-footer">
 		  <div class="clearfix">
