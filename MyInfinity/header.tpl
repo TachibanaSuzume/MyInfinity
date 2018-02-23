@@ -116,7 +116,7 @@
 
 	        <li>
 	          <a href="/logout.php">
-	            <i class="menu-icon zmdi zmdi-power zmdi-hc-lg"></i>
+	            <i class="menu-icon fa fa-power-off"></i>
 	            <span class="menu-text">{$LANG.logouttitle}</span>
 	          </a>
 	        </li>
