@@ -100,11 +100,11 @@
 			{include file="$template/includes/captcha.tpl"}
 			
 			{if $accepttos}
-				<div class="form-group text-center">
-					<label class="checkbox">
-						<input type="checkbox" name="accepttos" class="accepttos" style="margin-left: 0;position: relative;" tabindex="14">
-						{$LANG.ordertosagreement} <a href="{$tosurl}" target="_blank">{$LANG.ordertos}</a>
-					</label>
+				<div class="form-group m-b-xl">
+					<div class="checkbox checkbox-primary">
+						<input type="checkbox" name="accepttos" id="accepttos"/>
+						<label for="accepttos">{$LANG.ordertosagreement} {$LANG.ordertos}</label>
+					</div>
 				</div>
 			{/if}
 			
