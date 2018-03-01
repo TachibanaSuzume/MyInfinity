@@ -1,8 +1,7 @@
-<link rel="stylesheet" type="text/css" href="{$BASE_PATH_CSS}/dataTables.bootstrap.css">
 <link rel="stylesheet" type="text/css" href="{$BASE_PATH_CSS}/dataTables.responsive.css">
 <script type="text/javascript" charset="utf8" src="{$BASE_PATH_JS}/jquery.dataTables.min.js"></script>
-<script type="text/javascript" charset="utf8" src="{$BASE_PATH_JS}/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript" charset="utf8" src="{$BASE_PATH_JS}/dataTables.responsive.min.js"></script>
+<link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/table.css">	
 
 {if isset($filterColumn) && $filterColumn}
 <script type="text/javascript">
@@ -22,7 +21,7 @@ if (typeof(buildFilterRegex) !== "function") {
 }
 
 jQuery(".view-filter-btns a").click(function(e) {ldelim}
-    var filterValue = jQuery(this).find("span").not('.badge').html().trim();
+    var filterValue = jQuery(this).find("span").html().trim();
     var dataTable = jQuery('#table{$tableName}').DataTable();
     var filterValueRegex;
     if (jQuery(this).hasClass('active')) {ldelim}
@@ -44,7 +43,7 @@ jQuery(".view-filter-btns a").click(function(e) {ldelim}
             .draw();
     {rdelim}
 
-    // Prevent jumping to the top of the page
+    // Prevent jumping to the top of the page 
     // when no matching tag is found.
     e.preventDefault();
 {rdelim});
@@ -56,9 +55,9 @@ var alreadyReady = false; // The ready function is being called twice on page lo
 jQuery(document).ready( function () {ldelim}
     var table = jQuery("#table{$tableName}").DataTable({ldelim}
         "dom": '<"listtable"fit>pl',{if isset($noPagination) && $noPagination}
-        "paging": false,{/if}{if isset($noInfo) && $noInfo}
-        "info": false,{/if}{if isset($noSearch) && $noSearch}
-        "filter": false,{/if}
+        "paging": false,{/if}
+        "info": false,
+        "filter": false,
         "responsive": true,
         "oLanguage": {ldelim}
             "sEmptyTable":     "{$LANG.norecordsfound}",
@@ -75,8 +74,8 @@ jQuery(document).ready( function () {ldelim}
             "oPaginate": {ldelim}
                 "sFirst":    "{$LANG.tablepagesfirst}",
                 "sLast":     "{$LANG.tablepageslast}",
-                "sNext":     "{$LANG.tablepagesnext}",
-                "sPrevious": "{$LANG.tablepagesprevious}"
+                "sNext":     "<i class=\"zmdi zmdi-chevron-right\"><\/i>",
+                "sPrevious": "<i class=\"zmdi zmdi-chevron-left\"><\/i>"
             {rdelim}
         {rdelim},
         "pageLength": 10,
@@ -86,20 +85,14 @@ jQuery(document).ready( function () {ldelim}
         "lengthMenu": [
             [10, 25, 50, -1],
             [10, 25, 50, "{$LANG.tableviewall}"]
-        ],
-        "aoColumnDefs": [
-            {ldelim}
-                "bSortable": false,
-                "aTargets": [ {if isset($noSortColumns) && $noSortColumns !== ''}{$noSortColumns}{/if} ]
-            {rdelim},
-            {ldelim}
-                "sType": "string",
-                "aTargets": [ {if isset($filterColumn) && $filterColumn}{$filterColumn}{/if} ]
-            {rdelim}
-        ],
+        ],{if isset($noSortColumns) && $noSortColumns !== ''}
+        "aoColumnDefs": [{ldelim}
+            "bSortable": false,
+            "aTargets": [ {$noSortColumns} ]
+        {rdelim}],{/if}
         "stateSave": true
     {rdelim});
-
+    jQuery(".dataTables_filter input").attr("placeholder", "{$LANG.tableentersearchterm}");
     {if isset($filterColumn) && $filterColumn}
     // highlight remembered filter on page re-load
     var rememberedFilterTerm = table.state().columns[{$filterColumn}].search.search;
