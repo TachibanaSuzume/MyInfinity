@@ -46,14 +46,14 @@
 			{if !$loggedin}
 				<li class="has-submenu">
 				  <a href="javascript:void(0)" class="submenu-toggle">
-					<i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
+					<i class="menu-icon fa fa-user"></i>
 					<span class="menu-text">{$LANG.loginbutton}{if $condlinks.allowClientRegistration}/{$LANG.clientregistertitle}{/if}</span>
 					<i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
 				  </a>
 				  <ul class="submenu">
-					<li><a href="{$WEB_ROOT}/login.php"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>{$LANG.loginbutton}</a></li>
+					<li><a href="{$WEB_ROOT}/login.php"><i class="menu-icon fa fa-sign-in"></i>{$LANG.loginbutton}</a></li>
 					{if $condlinks.allowClientRegistration}
-					<li><a href="{$WEB_ROOT}/register.php"><i class="zmdi m-r-md zmdi-hc-lg zmdi-pin"></i>{$LANG.clientregistertitle}</a></li>
+					<li><a href="{$WEB_ROOT}/register.php"><i class="menu-icon fa fa-plus"></i>{$LANG.clientregistertitle}</a></li>
 					{/if}
 				  </ul>
 				</li>
@@ -66,7 +66,7 @@
 
 	        <li>
 	          <a href="/logout.php">
-	            <i class="menu-icon zmdi zmdi-power zmdi-hc-lg"></i>
+	            <i class="menu-icon fa fa-sign-out"></i>
 	            <span class="menu-text">{$LANG.logouttitle}</span>
 	          </a>
 	        </li>
