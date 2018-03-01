@@ -1,0 +1,76 @@
+.dataTables_length {
+	text-align: left!important;
+}
+
+.form-inline .form-control {
+   min-width: 10px;
+}
+
+.table-list > tbody > tr > td {
+	background-color:transparent;
+}
+
+.table-list > tbody > tr:nth-of-type(odd) {
+	background-color: #f9f9f9;
+}
+
+.table-list > tbody > tr:nth-child(even) > td {
+    background-color:transparent;
+}
+
+table.dataTable td, table.dataTable th {
+    box-sizing: inherit;
+}
+
+.dataTables_wrapper table.table-list thead th.sorting_asc, .dataTables_wrapper table.table-list thead th.sorting_desc {
+   background-color: transparent;
+}
+
+@media (max-width: 767px) {
+	.dataTables_length {
+		text-align: center!important;
+	}
+
+    .table,
+    .table > tbody,
+    .table > thead,
+    .table > tfoot,
+    .table > tbody > tr,
+    .table > tbody > tr > td,
+    .table > tfoot > tr,
+    .table > tfoot > tr > td,
+    .table > thead > tr,
+    .table > thead > tr > td {
+        display: block;
+        line-height: 16px;
+    }
+    .table > thead > tr > th {
+        display: none;
+    }
+    .table > thead > tr > th:first-child {
+        display: block;
+        width: 100%!important;
+    }
+    .table:not(.table-sub) > tbody > tr:not(.collapse-row) {
+        position: relative;
+        padding: 16px;
+        border-top: 1px solid #e9edf2;
+    }
+	.table > tbody > tr > td, 
+	.table > tbody > tr > td:first-child, 
+	.table > tbody > tr > td:last-child, 
+	.table > tfoot > tr > td, 
+	.table > tfoot > tr > td:first-child, 
+	.table > tfoot > tr > td:last-child {
+		padding: 0;
+		border: none;
+	}
+	.panel .table td, .panel .table th {
+		border-bottom: none;
+		padding: 12px;
+	}
+	.dataTables_wrapper table.table-list thead th {
+		border-bottom: 4px solid #66CCFF;
+		font-weight: 400;
+	}
+}
