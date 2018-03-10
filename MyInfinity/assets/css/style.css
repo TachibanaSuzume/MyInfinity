@@ -374,6 +374,19 @@ div.email-verification {
   color:#b3a879
 }
 
+.pagination {
+  display:inline-block;
+  padding-left:0;
+  margin:20px 0;
+  border-radius:4px;
+  font-size: .8em;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 2px 0;
+    white-space: nowrap;
+}
+
 .dataTables_wrapper .dataTables_info {
   margin:0;
   padding:9px 10px;
@@ -455,8 +468,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 .dataTables_wrapper .dataTables_paginate {
   float:right;    
-  margin-top: -15px;
-  padding-right: 10px;
+  padding:6px 30px 0
 }
 .dataTables_wrapper .dataTables_paginate .pagination>li>a,.dataTables_wrapper .dataTables_paginate .pagination>li>span {
   padding:4px 8px
