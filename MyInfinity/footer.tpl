@@ -39,17 +39,15 @@
 	    </div>
 	</div>
 
-	<!-- build:js {$WEB_ROOT}/templates/{$template}/assets/js/core.min.js -->
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/libs/bower/jquery-slimscroll/jquery.slimscroll.js"></script>
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/libs/bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
-	<!-- endbuild -->
 
-	<!-- build:js {$WEB_ROOT}/templates/{$template}/assets/js/app.min.js -->
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/library.js"></script>
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/plugins.js"></script>
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/app.min.js"></script>
-	<!-- endbuild -->
+	
 {/if}
+
 {$footeroutput}
 </body>
 </html>
