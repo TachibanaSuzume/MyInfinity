@@ -1,15 +1,3 @@
-{if $modulecustombuttonresult}
-    {if $modulecustombuttonresult == "success"}
-        {include file="$template/includes/alert.tpl" type="success" msg=$LANG.moduleactionsuccess textcenter=true idname="alertModuleCustomButtonSuccess"}
-    {else}
-        {include file="$template/includes/alert.tpl" type="error" msg=$LANG.moduleactionfailed|cat:' ':$modulecustombuttonresult textcenter=true idname="alertModuleCustomButtonFailed"}
-    {/if}
-{/if}
-
-{if $pendingcancellation}
-    {include file="$template/includes/alert.tpl" type="error" msg=$LANG.cancellationrequestedexplanation textcenter=true idname="alertPendingCancellation"}
-{/if}
-
 <section class="app-content">
 	<div class="row">
 		<div class="col-md-{if $tplOverviewTabOutput}12{else}9{/if}">
@@ -25,6 +13,17 @@
 					</div>
                     <div class="panel-body">
                         <div class="tab-content margin-bottom">
+                            {if $modulecustombuttonresult}
+                                {if $modulecustombuttonresult == "success"}
+                                    {include file="$template/includes/alert.tpl" type="success" msg=$LANG.moduleactionsuccess textcenter=true idname="alertModuleCustomButtonSuccess"}
+                                {else}
+                                    {include file="$template/includes/alert.tpl" type="error" msg=$LANG.moduleactionfailed|cat:' ':$modulecustombuttonresult textcenter=true idname="alertModuleCustomButtonFailed"}
+                                {/if}
+                            {/if}
+
+                            {if $pendingcancellation}
+                                {include file="$template/includes/alert.tpl" type="error" msg=$LANG.cancellationrequestedexplanation textcenter=true idname="alertPendingCancellation"}
+                            {/if}
                             <ul class="nav nav-tabs" id="myTab" >
                             {foreach $primarySidebar as $item}
                                 {if $item->hasChildren()}
@@ -123,7 +122,7 @@
                                                             <div class="col-sm-5 text-right">
                                                                 <strong>{$LANG.serverhostname}</strong>
                                                             </div>
-                                                            <div class="col-sm-7 text-left">
+                                                            <div class="col-sm-7 text-center">
                                                                 {$domain}
                                                             </div>
                                                         </div>
@@ -132,7 +131,7 @@
                                                                 <div class="col-sm-5 text-right">
                                                                     <strong>{$LANG.primaryIP}</strong>
                                                                 </div>
-                                                                <div class="col-sm-7 text-left">
+                                                                <div class="col-sm-7 text-center">
                                                                     {$dedicatedip}
                                                                 </div>
                                                             </div>
@@ -142,7 +141,7 @@
                                                                 <div class="col-sm-5 text-right">
                                                                     <strong>{$LANG.assignedIPs}</strong>
                                                                 </div>
-                                                                <div class="col-sm-7 text-left">
+                                                                <div class="col-sm-7 text-center">
                                                                     {$assignedips|nl2br}
                                                                 </div>
                                                             </div>
@@ -152,7 +151,7 @@
                                                                 <div class="col-sm-5 text-right">
                                                                     <strong>{$LANG.domainnameservers}</strong>
                                                                 </div>
-                                                                <div class="col-sm-7 text-left">
+                                                                <div class="col-sm-7 text-center">
                                                                     {$ns1}<br />{$ns2}
                                                                 </div>
                                                             </div>
@@ -163,7 +162,7 @@
                                                                 <div class="col-sm-5 text-right">
                                                                     <strong>{$LANG.orderdomain}</strong>
                                                                 </div>
-                                                                <div class="col-sm-7 text-left">
+                                                                <div class="col-sm-7 text-center">
                                                                     {$domain}&nbsp;<a href="http://{$domain}" target="_blank" class="btn btn-default btn-xs" >{$LANG.visitwebsite}</a>
                                                                 </div>
                                                             </div>
@@ -173,7 +172,7 @@
                                                                 <div class="col-sm-5 text-right">
                                                                     <strong>{$LANG.serverusername}</strong>
                                                                 </div>
-                                                                <div class="col-sm-7 text-left">
+                                                                <div class="col-sm-7 text-center">
                                                                     {$username}
                                                                 </div>
                                                             </div>
@@ -182,7 +181,7 @@
                                                             <div class="col-sm-5 text-right">
                                                                 <strong>{$LANG.servername}</strong>
                                                             </div>
-                                                            <div class="col-sm-7 text-left">
+                                                            <div class="col-sm-7 text-center">
                                                                 {$serverdata.hostname}
                                                             </div>
                                                         </div>
@@ -190,7 +189,7 @@
                                                             <div class="col-sm-5 text-right">
                                                                 <strong>{$LANG.domainregisternsip}</strong>
                                                             </div>
-                                                            <div class="col-sm-7 text-left">
+                                                            <div class="col-sm-7 text-center">
                                                                 {$serverdata.ipaddress}
                                                             </div>
                                                         </div>
@@ -199,7 +198,7 @@
                                                                 <div class="col-sm-5 text-right">
                                                                     <strong>{$LANG.domainnameservers}</strong>
                                                                 </div>
-                                                                <div class="col-sm-7 text-left">
+                                                                <div class="col-sm-7 text-center">
                                                                     {if $serverdata.nameserver1}{$serverdata.nameserver1} ({$serverdata.nameserver1ip})<br />{/if}
                                                                     {if $serverdata.nameserver2}{$serverdata.nameserver2} ({$serverdata.nameserver2ip})<br />{/if}
                                                                     {if $serverdata.nameserver3}{$serverdata.nameserver3} ({$serverdata.nameserver3ip})<br />{/if}
@@ -242,7 +241,7 @@
                                                             <div class="col-sm-5">
                                                                 <strong>{$configoption.optionname}</strong>
                                                             </div>
-                                                            <div class="col-sm-7 text-left">
+                                                            <div class="col-sm-7 text-center">
                                                                 {if $configoption.optiontype eq 3}{if $configoption.selectedqty}{$LANG.yes}{else}{$LANG.no}{/if}{elseif $configoption.optiontype eq 4}{$configoption.selectedqty} x {$configoption.selectedoption}{else}{$configoption.selectedoption}{/if}
                                                             </div>
                                                         </div>
@@ -256,7 +255,7 @@
                                                             <div class="col-sm-5">
                                                                 <strong>{$field.name}</strong>
                                                             </div>
-                                                            <div class="col-sm-7 text-left">
+                                                            <div class="col-sm-7 text-center">
                                                                 {$field.value}
                                                             </div>
                                                         </div>

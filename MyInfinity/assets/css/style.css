@@ -454,8 +454,9 @@ div.dataTables_wrapper div.dataTables_info {
   border:0
 }
 .dataTables_wrapper .dataTables_paginate {
-  float:right;
-  padding:6px 30px 0
+  float:right;    
+  margin-top: -15px;
+  padding-right: 10px;
 }
 .dataTables_wrapper .dataTables_paginate .pagination>li>a,.dataTables_wrapper .dataTables_paginate .pagination>li>span {
   padding:4px 8px
@@ -589,4 +590,49 @@ table.dtr-inline.collapsed .responsive-edit-button {
 }
 .status-dead,.status-lost {
   color:#000
+}
+
+div.product-details {
+  margin:0 0 20px 0
+}
+div.product-details div.product-icon {
+  margin:0;
+  padding:0;
+  background-color:#efefef;
+  border-radius:10px;
+  padding:30px;
+  font-size:60px;
+  line-height:1em
+}
+.product-status {
+  margin:0 0 20px 0;
+  padding:0;
+  border-radius:10px
+}
+.product-status-pending {
+  background-color:#f89406
+}
+.product-status-active {
+  background-color:#46a546
+}
+.product-status-suspended {
+  background-color:#0768b8
+}
+.product-status-cancelled,.product-status-terminated {
+  background-color:#666
+}
+.product-status-fraud {
+  background-color:#000
+}
+.product-status-text {
+  padding:5px;
+  color:#fff;
+  text-align:center;
+  text-transform:uppercase
+}
+div.product-details-tab-container {
+  margin:0;
+  padding:20px;
+  border:1px solid #ddd;
+  border-top:0
 }
