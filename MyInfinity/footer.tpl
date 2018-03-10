@@ -10,6 +10,24 @@
 		</footer>
 	  </div>
 	</main>
+	<div id="side-panel" class="side-panel">
+		<div class="panel-header">
+			<h4 class="panel-title">Friends</h4>
+		</div>
+		<div class="scrollable-container">
+			<div class="media-group">
+				{foreach $locales as $locale}
+			  		<a href="{$currentpagelinkback} language={$locale.language}" class="media-group-item">
+					  <div class="media">
+						<div class="media-body">
+						  <small class="media-meta">{$locale.localisedName}</small>
+						</div>
+					  </div>
+					</a>
+	            {/foreach}
+			</div>
+		</div><!-- .scrollable-container -->
+	</div><!-- /#side-panel -->
 
 	<div class="modal system-modal fade" id="modalAjax" tabindex="-1" role="dialog" aria-hidden="true">
 	    <div class="modal-dialog">

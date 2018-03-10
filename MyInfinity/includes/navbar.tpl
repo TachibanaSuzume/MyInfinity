@@ -40,21 +40,6 @@
             <i class="zmdi zmdi-hc-lg zmdi-search"></i>
           </a>
         </li>
-        <li class="dropdown">
-			  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-labelledby="dropdownMenuLanguage"><i class="zmdi zmdi-hc-lg zmdi-globe"></i></a>
-			  <div class="media-group dropdown-menu animated flipInY">
-			  	{foreach $locales as $locale}
-			  		<a href="{$currentpagelinkback} language={$locale.language}" class="media-group-item">
-					  <div class="media">
-						<div class="media-body">
-						  <small class="media-meta">{$locale.localisedName}</small>
-						</div>
-					  </div>
-					</a>
-	            {/foreach}
-			  	
-			</div>
-		</li>
 
 		{if $loggedin}
 			<li class="dropdown">
@@ -105,7 +90,9 @@
 			  </ul>
 			</li>
 		{/if}
-        
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="side-panel-toggle" data-toggle="class" data-target="#side-panel" data-class="open" role="button"><i class="zmdi zmdi-hc-lg zmdi-globe"></i></a>
+        </li>
       </ul>
     </div>
   </div>

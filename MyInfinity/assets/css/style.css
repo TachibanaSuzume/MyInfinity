@@ -298,3 +298,295 @@
 .ticket-reply .clear {
   clear: both
 }
+
+div.email-verification {
+  margin:0;
+  padding:10px;
+  font-weight:300;
+  background-color:#f8f8f8;
+  border-bottom:1px solid #eee;
+  color:#333
+}
+.email-verification .text {
+  display:block;
+  padding:6px 0
+}
+.email-verification .btn {
+  margin:3px 0;
+  padding:3px 10px;
+  background-color:#50525f;
+  border-color:#50525f;
+  color:#fff;
+  font-style:normal;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis
+}
+.email-verification .btn:active,.email-verification .btn[disabled]:hover {
+  background-color:#50525f;
+  border-color:#50525f;
+  color:#fff
+}
+.email-verification .btn.close {
+  margin-left:10px;
+  background-color:transparent;
+  color:rgba(55,55,55,.5);
+  font-size:22px;
+  opacity:1
+}
+.email-verification .btn.close:hover {
+  color:rgba(55,55,55,.8)
+}
+.email-verification .fa {
+  color:#666;
+  float:left;
+  padding:2px 10px 0 0;
+  font-size:24px
+}
+@media (min-width:768px) {
+  .email-verification .text {
+  padding-top:9px;
+  padding-bottom:0
+}
+.email-verification .btn {
+  padding:12px 25px
+}
+.email-verification .button {
+  float:right
+}
+.email-verification .fa {
+  font-size:36px
+}
+}.email-verification.success {
+  background-color:#ebfde4;
+  border-bottom:1px solid #e3f7d5;
+  color:#5cb85c
+}
+.email-verification.success .fa {
+  color:#6fbb51
+}
+.email-verification.failed {
+  background-color:#fdf8e3;
+  border-bottom:1px solid #f7f3d0;
+  color:#b3a879
+}
+.email-verification.failed .fa {
+  color:#b3a879
+}
+
+.dataTables_wrapper .dataTables_info {
+  margin:0;
+  padding:9px 10px;
+  background-color:#4f5360;
+  border:0;
+  border-bottom:1px solid #fff;
+  font-size:.9em;
+  color:#fff;
+  border-radius:0;
+  text-align:left!important
+}
+div.dataTables_wrapper div.dataTables_info {
+  padding:21px 30px!important;
+  font-weight:300
+}
+.dataTables_wrapper table.table-list {
+  margin-top:0!important;
+  margin-bottom:6px!important;
+  width:100%!important
+}
+.dataTables_wrapper table.table-list thead th {
+  border-bottom:4px solid #a2d27a;
+  font-weight:400
+}
+.dataTables_wrapper table.table-list thead th:nth-child(even) {
+  border-bottom:4px solid #7bc144
+}
+.dataTables_wrapper table.table-list thead th.sorting_asc,.dataTables_wrapper table.table-list thead th.sorting_desc {
+  background-color:#f6f6f6
+}
+.dataTables_wrapper .dataTables_filter {
+  float:right
+}
+.dataTables_wrapper .dataTables_filter label {
+  margin:0;
+  padding:12px
+}
+.dataTables_wrapper .dataTables_filter label .form-control {
+  background:url(../../../assets/img/search.png) #fff no-repeat 8px 5px;
+  padding:7px 10px 7px 45px!important;
+  border:1px solid #fff;
+  height:auto;
+  width:200px;
+  font-size:13px;
+  border-radius:2px
+}
+@media (max-width:600px) {
+  .dataTables_wrapper .dataTables_info {
+  padding:9px 10px 40px
+}
+.dataTables_wrapper .dataTables_filter {
+  float:right;
+  margin-top:30px;
+  width:100%
+}
+.dataTables_wrapper .dataTables_filter label {
+  display:block;
+  margin:5px;
+  padding:0
+}
+.dataTables_wrapper .dataTables_filter label .form-control {
+  margin:0;
+  width:100%
+}
+}.dataTables_wrapper .dataTables_length {
+  background-color:#f6f6f6;
+  font-size:.8em;
+  color:#888
+}
+.dataTables_wrapper .dataTables_length label {
+  padding:10px 10px 0 30px
+}
+.dataTables_wrapper .dataTables_length label .form-control {
+  display:inline-block;
+  padding:2px;
+  height:25px;
+  width:auto;
+  border:0
+}
+.dataTables_wrapper .dataTables_paginate {
+  float:right;
+  padding:6px 30px 0
+}
+.dataTables_wrapper .dataTables_paginate .pagination>li>a,.dataTables_wrapper .dataTables_paginate .pagination>li>span {
+  padding:4px 8px
+}
+.pagination>li>a,.pagination>li>span {
+  color:#444
+}
+.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover {
+  background-color:#4f5360;
+  border-color:#4f5360
+}
+table.dataTable.dtr-inline.collapsed tbody td:first-child:before,table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
+  top:inherit!important;
+  box-shadow:none!important;
+  line-height:16px!important
+}
+.table-container {
+  padding:0 0 25px 0
+}
+table.table-list thead th {
+  padding:8px;
+  background-color:#fff;
+  border-bottom:1px solid #ccc;
+  color:#333;
+  text-align:center
+}
+.table-list>tbody>tr:hover {
+  cursor:pointer;
+  cursor:hand
+}
+table.table-list tbody td {
+  padding:10px;
+  vertical-align:middle;
+  font-size:.94em
+}
+.table-list>tbody>tr>td a.border-left {
+  border-left:1px solid #eee;
+  padding-left:20px;
+  display:block
+}
+.table-list>tbody>tr>td {
+  background-color:#fff
+}
+.table-list>tbody>tr:nth-child(even)>td {
+  background-color:#f8fcfd
+}
+table.dtr-inline .dtr-title:empty {
+  display:none!important
+}
+table.dtr-inline .responsive-edit-button {
+  display:none
+}
+table.dtr-inline.collapsed .responsive-edit-button {
+  display:inherit
+}
+
+.status {
+  display:block;
+  font-size:.9em;
+  line-height:22px;
+  border:2px solid #ccc;
+  border-radius:3px;
+  background-color:#fff;
+  color:#333
+}
+.status-custom {
+  background-color:#fff;
+  color:#000;
+  border:1px solid #000;
+  padding:1px
+}
+.status-pending {
+  color:#d9534f
+}
+.status-pending.transfer {
+  color:#a68500
+}
+.status-active,.status-open,.status.completed {
+  color:#3fad46
+}
+.status-suspended {
+  color:#f0ad4e
+}
+.status-customer-reply {
+  color:#f60
+}
+.status-answered,.status-fraud {
+  color:#000
+}
+.status-expired,.status-transferred.away {
+  color:#004258
+}
+.status-cancelled {
+  color:#9fa29a
+}
+.status-terminated {
+  color:#666
+}
+.status-onhold {
+  color:#248
+}
+.status-inprogress {
+  color:#c00
+}
+.status-closed {
+  color:#888
+}
+.status-paid {
+  color:#498302
+}
+.status-unpaid {
+  color:#ed3e48
+}
+.status-cancelled {
+  color:#87939f
+}
+.status-collections {
+  color:#9a141e
+}
+.status-refunded {
+  color:#319fc3
+}
+.status-customer-reply {
+  color:#f60
+}
+.status-delivered {
+  color:#248
+}
+.status-accepted {
+  color:#498302
+}
+.status-dead,.status-lost {
+  color:#000
+}
