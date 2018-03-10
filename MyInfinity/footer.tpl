@@ -50,5 +50,6 @@
 	<script src="{$WEB_ROOT}/templates/{$template}/assets/js/app.min.js"></script>
 	<!-- endbuild -->
 {/if}
+{$footeroutput}
 </body>
 </html>
