@@ -13,6 +13,8 @@
 	{if $errormessage}
 		{include file="$template/includes/alert.tpl" type="error" errorshtml=$errormessage}
 	{/if}		
+
+	{include file="$template/includes/linkedaccounts.tpl" linkContext="registration"}
 	<div class="simple-page-form animated flipInY" id="signup-form">
 		<form method="post" class="using-password-strength" action="{$smarty.server.PHP_SELF}" role="form">
 			<input type="hidden" name="register" value="true"/>

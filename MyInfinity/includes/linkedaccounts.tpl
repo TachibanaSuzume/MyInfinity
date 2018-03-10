@@ -1,4 +1,3 @@
-{debug}
 {if ($linkableProviders || $hasLinkedProvidersEnabled) && $linkContext == 'linktable'}
     <table id="tableLinkedAccounts" class="table display data-driven"
            data-ajax-url="{$linkedAccountsUrl}"
