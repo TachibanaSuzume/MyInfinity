@@ -12,7 +12,7 @@
 	</main>
 	<div id="side-panel" class="side-panel">
 		<div class="panel-header">
-			<h4 class="panel-title">Friends</h4>
+			<h4 class="panel-title">{$LANG.language}</h4>
 		</div>
 		<div class="scrollable-container">
 			<div class="media-group">
