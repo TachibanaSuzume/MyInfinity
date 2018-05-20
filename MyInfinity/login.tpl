@@ -1,6 +1,6 @@
 <body class="simple-page">
 	<div class="simple-page-wrap">
-		<div class="simple-page-logo animated swing">
+		<div class="simple-page-logo">
 			<a href="{$WEB_ROOT}/index.php">
 				<span><i class="fa fa-sign-in"></i></span>
 				<span>{$LANG.login}</span>
@@ -13,7 +13,7 @@
 		{elseif $ssoredirect}
 			{include file="$template/includes/alert.tpl" type="info" msg=$LANG.sso.redirectafterlogin textcenter=true}
 		{/if}
-		<div class="simple-page-form animated flipInY" id="login-form">
+		<div class="simple-page-form" id="login-form">
 			<form method="post" action="{$systemurl}dologin.php">
 				<div class="form-group">
 					<input id="inputEmail" name="username" type="email" class="form-control" placeholder="{$LANG.clientareaemail}">

@@ -65,7 +65,7 @@
 	        <li class="menu-separator"><hr></li>
 
 	        <li>
-	          <a href="/logout.php">
+	          <a href="{$WEB_ROOT}/logout.php">
 	            <i class="menu-icon fa fa-sign-out"></i>
 	            <span class="menu-text">{$LANG.logouttitle}</span>
 	          </a>

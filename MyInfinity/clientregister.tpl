@@ -1,6 +1,6 @@
 <body class="simple-page">
 	<div class="simple-page-wrap">
-		<div class="simple-page-logo animated swing">
+		<div class="simple-page-logo">
 			<a href="{$WEB_ROOT}/index.php">
 				<span><i class="fa fa-user-plus"></i></span>
 				<span>{$LANG.register}</span>
@@ -15,7 +15,7 @@
 	{/if}		
 
 	{include file="$template/includes/linkedaccounts.tpl" linkContext="registration"}
-	<div class="simple-page-form animated flipInY" id="signup-form">
+	<div class="simple-page-form" id="signup-form">
 		<form method="post" class="using-password-strength" action="{$smarty.server.PHP_SELF}" role="form">
 			<input type="hidden" name="register" value="true"/>
 			<input type="hidden" name="state" value="state" />

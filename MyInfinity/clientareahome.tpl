@@ -4,9 +4,9 @@
 				<div class="widget p-md clearfix">
 					<div class="pull-left">
 						<h3 class="widget-title">Welcome to {$companyname}</h3>
-						<a href="{$WEB_ROOT}clientarea.php?action=services"><button type="button" class="btn btn-info btn-xs">{$LANG.clientareanavservices}</button></a>
-						<a href="{$WEB_ROOT}supporttickets.php"><button type="button" class="btn btn-warning btn-xs">{$LANG.clientareanavsupporttickets}</button></a>
-						<a href="{$WEB_ROOT}clientarea.php?action=invoices"><button type="button" class="btn btn-pink btn-xs">{$LANG.invoices}</button></a>
+						<a href="{$WEB_ROOT}/clientarea.php?action=services"><button type="button" class="btn btn-info btn-xs">{$LANG.clientareanavservices}</button></a>
+						<a href="{$WEB_ROOT}/supporttickets.php"><button type="button" class="btn btn-warning btn-xs">{$LANG.clientareanavsupporttickets}</button></a>
+						<a href="{$WEB_ROOT}/clientarea.php?action=invoices"><button type="button" class="btn btn-pink btn-xs">{$LANG.invoices}</button></a>
 					</div>
 				</div>
 			</div>

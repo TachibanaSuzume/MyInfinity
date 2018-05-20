@@ -126,8 +126,8 @@
 						    {/if}
 
 						    <div class="form-group text-center">
-						        <input class="btn btn-primary" type="submit" name="save" value="保存修改" />
-						        <input class="btn btn-default" type="reset" value="取消" />
+						        <input class="btn btn-primary" type="submit" name="save" value="Submit" />
+						        <input class="btn btn-default" type="reset" value="Reset" />
 						    </div>
 						
 						</form>

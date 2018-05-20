@@ -1,6 +1,6 @@
 <body class="simple-page">
 	<div class="simple-page-wrap">
-		<div class="simple-page-logo animated swing">
+		<div class="simple-page-logo">
 			<a href="{$WEB_ROOT}/index.php">
 				<span><i class="fa fa-key"></i></span>
 				<span>{$LANG.pwreset}</span>

@@ -1968,6 +1968,9 @@ body.menubar-left .navbar-container {
 @media (max-width: 767px) {
   .app-footer .footer-menu {
     display: block;
+   position:absolute;
+   bottom:0;
+   width:100%;
     width: 100%;
     float: none; }
     .app-footer .footer-menu li:first-child > a {

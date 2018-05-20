@@ -19,7 +19,7 @@
                 <small>{$LANG.more}</small>
                 <span class="caret"></span>
               </a>
-              <ul class="dropdown-menu animated flipInY">
+              <ul class="dropdown-menu">
                 <li>
                   <a class="text-color" href="{$WEB_ROOT}/clientarea.php?action=details">
                     <span class="m-r-xs"><i class="fa fa-user"></i></span>
@@ -59,7 +59,7 @@
             </li>
           </ul>
 		  {else}
-		    <h5><a href="/login.php" class="username">{$LANG.login}</a></h5>
+		    <h5><a href="{$WEB_ROOT}/login.php" class="username">{$LANG.login}</a></h5>
 		  {/if}
           
           
