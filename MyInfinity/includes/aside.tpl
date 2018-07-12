@@ -2,7 +2,7 @@
 	  <div class="media-left">
         <div class="avatar avatar-md avatar-circle">
 		{if $loggedin}
-          <a href="javascript:void(0)"><img class="img-avatar img-avatar32" src="{if $clientsdetails.email|strpos:'@qq.com'}//q1.qlogo.cn/g?b=qq&nk={$clientsdetails.email|replace:'@qq.com'}&s=100{else}//cn.gravatar.com/avatar/{$clientsdetails.email|md5}?s=64&d={$systemurl}/templates/{$template}/assets/images/default.jpg{/if}" alt="" /></a>
+          <a href="javascript:void(0)"><img class="img-avatar img-avatar32" src="{if $clientsdetails.email|strpos:'@qq.com'}//q1.qlogo.cn/g?b=qq&nk={$clientsdetails.email|replace:'@qq.com':''}&s=100{else}//cn.gravatar.com/avatar/{$clientsdetails.email|md5}?s=64&d={$systemurl}/templates/{$template}/assets/images/default.jpg{/if}" alt="" /></a>
 		{else}
 		  <a href="javascript:void(0)"><img class="img-responsive" src="{$WEB_ROOT}/templates/{$template}/assets/images/default.jpg" alt="avatar"/></a>
 		{/if}

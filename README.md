@@ -16,6 +16,9 @@ A Theme for WHMCS 6.x & 7.x
 * 如果觉得好看请务必打笔巨款
 * 肝不动了(╯°□°）╯︵ ┻━┻
 
+## 更新日志
+* 2018/7/12 修正750以上版本的replace问题(ArgumentCountError: Too few arguments to function smarty_modifier_replace())
+
 ## 捐赠
 * 支付宝    admin@loli.ren
 * Paypal   zzm317@outlook.com

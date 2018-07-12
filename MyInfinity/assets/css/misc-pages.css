@@ -2,9 +2,27 @@ body.simple-page {
   background-color: #188ae2;
   padding-top: 8%; }
 
-.simple-page-wrap {
-  width: 90%;
-  margin: 0 auto; }
+
+@media (min-width: 470px){
+  .simple-page-wrap {
+    width: 75%;
+    margin: 0 auto; 
+  }
+}
+
+@media (min-width: 970px){
+  .simple-page-wrap {
+    width: 50%!important;
+    margin: 0 auto; 
+  }
+}
+
+@media (max-width: 470px){
+  .simple-page-wrap {
+    width: 90%;
+    margin: 0 auto; 
+  }
+}
 
 .simple-page-logo {
   text-align: center;
