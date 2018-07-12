@@ -17,6 +17,7 @@ A Theme for WHMCS 6.x & 7.x
 * 肝不动了(╯°□°）╯︵ ┻━┻
 
 ## 更新日志
+* 2018/7/12 优化登录/注册/密码找回框尺寸
 * 2018/7/12 修正750以上版本的replace问题(ArgumentCountError: Too few arguments to function smarty_modifier_replace())
 
 ## 捐赠
