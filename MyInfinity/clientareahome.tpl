@@ -84,7 +84,7 @@
 		<div class="widget">
 			<header class="widget-header">
 				<h4 class="widget-title pull-left">
-				{if $item->hasIcon()}<i class="{$item->getIcon()}"></i>&nbsp;{/if}
+				{if $item->hasIcon()}<i class="{$item->getIcon()|replace:'fas':'fa'}"></i>&nbsp;{/if}
 				{$item->getLabel()}
 				{if $item->hasBadge()}&nbsp;<span class="badge">{$item->getBadge()}</span>{/if}</h4>
 				{if $item->getExtra('btn-link') && $item->getExtra('btn-text')}

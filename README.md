@@ -1,5 +1,10 @@
 # MyInfinity
-A Theme for WHMCS 6.x & 7.x
+A Theme for WHMCS 7.x
+
+## 测试情况
+测试761无任何问题
+测试742无任何问题
+购物车建议使用Neworld
 
 ## 编写状况
 * 本主题已编写完成(＞人＜;)
@@ -19,6 +24,7 @@ A Theme for WHMCS 6.x & 7.x
 ## 更新日志
 * 2018/7/12 优化登录/注册/密码找回框尺寸
 * 2018/7/12 修正750以上版本的replace问题(ArgumentCountError: Too few arguments to function smarty_modifier_replace())
+* 2018/12/20 修正whmcs的fas问题
 
 ## 捐赠
 * 支付宝    admin@loli.ren
