@@ -26,7 +26,7 @@
 			<input type="hidden" name="address2" value="address2" />
 			<input type="hidden" name="lastname" value="~" />
 			<input type="hidden" name="country"  value="CN" />
-			
+
 			<div class="form-group">
 				<input name="firstname" id="firstname" value="{$clientfirstname}" class="form-control" placeholder="{$LANG.clientareafirstname}">
 			</div>
@@ -101,6 +101,16 @@
 			
 			{include file="$template/includes/captcha.tpl"}
 			
+
+			{if $showMarketingEmailOptIn}
+				<div class="form-group m-b-xl">
+					<div class="checkbox checkbox-primary">
+						<input type="checkbox" name="marketingoptin" id="marketingoptin" value="1"{if $marketingEmailOptIn} checked{/if}/>
+						<label for="marketingoptin">{lang key='emailMarketing.joinOurMailingList'} {$marketingEmailOptInMessage}</label>
+					</div>
+				</div>
+	        {/if}
+
 			{if $accepttos}
 				<div class="form-group m-b-xl">
 					<div class="checkbox checkbox-primary">
