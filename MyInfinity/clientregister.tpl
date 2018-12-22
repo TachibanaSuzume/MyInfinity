@@ -8,7 +8,7 @@
 		</div>
 	{if $registrationDisabled}
 		{include file="$template/includes/alert.tpl" type="error" msg=$LANG.registerCreateAccount|cat:' <strong><a href="cart.php" class="alert-link">'|cat:$LANG.registerCreateAccountOrder|cat:'</a></strong>'}
-	{/if}
+	{else}
 
 	{if $errormessage}
 		{include file="$template/includes/alert.tpl" type="error" errorshtml=$errormessage}
@@ -120,4 +120,5 @@
 		<p class="copyright pull-left"><a href="{$systemurl}login.php">{$LANG.loginbutton}</a></p>
 		<p class="footer-menu pull-right"><a href="{$systemurl}pwreset.php">{$LANG.forgotpw}</a></p>
 	</div>
+	{/if}
 </body>
