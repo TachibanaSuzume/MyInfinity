@@ -27,6 +27,6 @@ A Theme for WHMCS 7.x
 * 2018/12/20 修正whmcs的fas问题
 
 ## 捐赠
-* 支付宝    https://whmcs.auth.ren/cart.php?a=add&pid=2
-* <a href='https://ko-fi.com/U7U7K54E' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=f' border='0' alt='Buy Me a Coffee' /></a>
+* 购物捐赠 <a href='https://whmcs.auth.ren/cart.php?a=add&pid=2' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=f' border='0' alt='购物捐赠' /></a> 
+* 买杯咖啡 <a href='https://ko-fi.com/U7U7K54E' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=f' border='0' alt='Buy Me a Coffee' /></a>
 * DogeCoin DQg6B64F7mKYBwwFXWd2P3XimQYuhyRGDS
