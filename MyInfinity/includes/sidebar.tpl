@@ -1,7 +1,7 @@
 {foreach $navbar as $item}
 	<li {if $item->hasChildren()} class="has-submenu"{/if}>
 		<a {if $item->hasChildren()} href="javascript:void(0)" class="submenu-toggle" {else} href="{$item->getUri()}"{/if}>
-			<i class="menu-icon fa fa-{$item->getUri()|replace:'/':''|replace:'.php':''|replace:'index?rp=':''|replace:'index':'home'|replace:'clientarea':'home'|replace:'services':'server'|replace:'billing':'credit-card-alt'|replace:'submitticket':'ticket'|replace:'cart':'shopping-cart'|replace:'announcements':'bullhorn'|replace:'knowledgebase':'question'|replace:'serverstatus':'server'|replace:'contact':'globe'|replace:'affiliates':'universal-access'|replace:'domains':'globe'|replace:'#':'certificate'}"></i>
+			<i class="menu-icon fa fa-{$item->getUri()|replace:'/':''|replace:'.php':''|replace:'index?rp=':''|replace:'index':'home'|replace:'clientarea':'home'|replace:'services':'server'|replace:'billing':'credit-card-alt'|replace:'submitticket':'ticket'|replace:'cart':'shopping-cart'|replace:'announcements':'bullhorn'|replace:'knowledgebase':'question'|replace:'serverstatus':'server'|replace:'contact':'globe'|replace:'affiliates':'universal-access'|replace:'domains':'globe'|replace:'#':'certificate'|replace:'homebullhorn':'bullhorn'|replace:'homequestion':'question'}"></i>
             <span class="menu-text">{$item->getLabel()}</span>
 			{if $item->hasChildren()} <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i> {/if}
         </a>
